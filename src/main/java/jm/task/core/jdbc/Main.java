@@ -11,7 +11,6 @@ import java.sql.Statement;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        // реализуйте алгоритм здесь
         Util.getConnection();
         UserServiceImpl userDao = new UserServiceImpl();
 
@@ -24,9 +23,9 @@ public class Main {
 
         userDao.removeUserById(1);
         userDao.getAllUsers();
-//        userDao.cleanUsersTable();
-//        userDao.dropUsersTable();
-//        userDao.cleanUsersTable();
+        userDao.cleanUsersTable();
+        userDao.dropUsersTable();
+        userDao.cleanUsersTable();
         Util.closeConnection();
     }
 }
