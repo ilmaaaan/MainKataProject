@@ -8,11 +8,11 @@ public class Util {
     // реализуйте настройку соеденения с БД
     private static Connection connection;
 
-    private static String hostName = "localhost";
-    private static String dbName = "mydbtest";
-    private static String userName = "rootroot";
-    private static String password = "root";
-    private static String connectionURL = "jdbc:mysql://" + hostName +  ":3306/" + dbName;
+    private static final String hostName = "localhost";
+    private static final String dbName = "mydbtest";
+    private static final String userName = "rootroot";
+    private static final String password = "root";
+    private static final String connectionURL = "jdbc:mysql://" + hostName +  ":3306/" + dbName;
 
 
     public static Connection getConnection() throws SQLException, ClassNotFoundException {
