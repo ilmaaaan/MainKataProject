@@ -10,7 +10,7 @@ import java.util.List;
 
 public class UserDaoJDBCImpl implements UserDao {
     private final Connection connection = Util.getConnection();
-    //control
+    //controlsecond
     public UserDaoJDBCImpl() throws SQLException, ClassNotFoundException {
     }
 
