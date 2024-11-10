@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9153d107-b8aa-4ff1-909f-b78e3f177716" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/dao/UserDaoJDBCImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jm/task/core/jdbc/util/Util.java" afterDir="false" />
-    </list>
+    <list default="true" id="9153d107-b8aa-4ff1-909f-b78e3f177716" name="Changes" comment="replacing Statement with PreparedStatement" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,12 +38,18 @@
   "keyToString": {
     "JUnit.UserServiceTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ilman/.vscode/KATA_1.1.1",
+    "last_opened_file_path": "C:/Users/ilman/.vscode/MainKataProject/src",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ilman\.vscode\MainKataProject\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TaskJDBC" />
@@ -82,11 +83,28 @@
       <option name="project" value="LOCAL" />
       <updated>1731068555449</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="replacing Statement with PreparedStatement">
+      <option name="closed" value="true" />
+      <created>1731249387828</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731249387828</updated>
+    </task>
+    <task id="LOCAL-00003" summary="replacing Statement with PreparedStatement">
+      <option name="closed" value="true" />
+      <created>1731249523666</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731249523666</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second control" />
-    <option name="LAST_COMMIT_MESSAGE" value="second control" />
+    <MESSAGE value="replacing Statement with PreparedStatement" />
+    <option name="LAST_COMMIT_MESSAGE" value="replacing Statement with PreparedStatement" />
   </component>
 </project>
