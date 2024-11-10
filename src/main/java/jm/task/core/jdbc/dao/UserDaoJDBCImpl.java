@@ -1,6 +1,5 @@
 package jm.task.core.jdbc.dao;
 
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.util.Util;
 
@@ -15,7 +14,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     @Override
     public void createUsersTable() throws SQLException {
-        Statement statement = null;
+        PreparedStatement preparedStatement = null;
 
         String sql = "CREATE TABLE IF NOT EXISTS users (\n" +
                 "  `id` INT NOT NULL AUTO_INCREMENT,\n" +
@@ -25,9 +24,9 @@ public class UserDaoJDBCImpl implements UserDao {
                 "  PRIMARY KEY (`id`));";
 
         try {
-            statement = connection.createStatement();
-            statement.execute(sql);
-            statement.getUpdateCount();
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
+            preparedStatement.getUpdateCount();
         } catch (SQLException e) {
             System.out.println("Ошибка при создании таблицы users");;
         }
@@ -36,13 +35,12 @@ public class UserDaoJDBCImpl implements UserDao {
 
     @Override
     public void dropUsersTable() throws SQLException {
-        Statement statement = null;
-
+        PreparedStatement preparedStatement = null;
         String sql = "drop table if exists users;";
 
         try {
-            statement = connection.createStatement();
-            statement.executeUpdate(sql);
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println("Ошибка при удалении таблицы users");
@@ -88,12 +86,12 @@ public class UserDaoJDBCImpl implements UserDao {
     @Override
     public List<User> getAllUsers() throws SQLException {
         List<User> userList = new ArrayList<>();
-        Statement statement = null;
+        PreparedStatement preparedStatement = null;
         String sql = "select id, name, lastName, age from users;";
 
         try {
-            statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+            preparedStatement = connection.prepareStatement(sql);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
                 User user = new User();
@@ -113,13 +111,13 @@ public class UserDaoJDBCImpl implements UserDao {
 
     @Override
     public void cleanUsersTable() throws SQLException {
-        Statement statement = null;
+        PreparedStatement preparedStatement = null;
 
         String sql = "delete from users;";
 
         try {
-            statement = connection.createStatement();
-            statement.executeUpdate(sql);
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             System.out.println("Ошибка при очищении таблицы users");
