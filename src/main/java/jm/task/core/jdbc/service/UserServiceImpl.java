@@ -1,5 +1,6 @@
 package jm.task.core.jdbc.service;
 
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 
@@ -7,7 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    private final UserDaoJDBCImpl userDao = new UserDaoJDBCImpl();
+    private final UserDaoHibernateImpl userDao = new UserDaoHibernateImpl();
 
     public UserServiceImpl() throws SQLException, ClassNotFoundException {
     }

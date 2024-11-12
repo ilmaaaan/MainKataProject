@@ -11,21 +11,21 @@ import java.sql.Statement;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        Util.getConnection();
-        UserServiceImpl userDao = new UserServiceImpl();
+//        Util.getConnection();
+        UserServiceImpl service = new UserServiceImpl();
 
-        userDao.createUsersTable();
+        service.createUsersTable();
 
-        userDao.saveUser("Name1", "LastName1", (byte) 20);
-        userDao.saveUser("Name2", "LastName2", (byte) 25);
-        userDao.saveUser("Name3", "LastName3", (byte) 31);
-        userDao.saveUser("Name4", "LastName4", (byte) 38);
+        service.saveUser("Name1", "LastName1", (byte) 20);
+        service.saveUser("Name2", "LastName2", (byte) 25);
+        service.saveUser("Name3", "LastName3", (byte) 31);
+        service.saveUser("Name4", "LastName4", (byte) 38);
 
-        userDao.removeUserById(1);
-        userDao.getAllUsers();
-        userDao.cleanUsersTable();
-        userDao.dropUsersTable();
-        userDao.cleanUsersTable();
+        service.removeUserById(1);
+        service.getAllUsers();
+        service.cleanUsersTable();
+        service.dropUsersTable();
+        service.cleanUsersTable();
         Util.closeConnection();
     }
 }
